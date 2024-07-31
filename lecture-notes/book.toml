@@ -1,0 +1,6 @@
+[book]
+authors = ["WangXingbin"]
+language = "en"
+multilingual = false
+src = "src"
+title = "CS 110: Principles of Computer Systems"

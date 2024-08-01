@@ -1,3 +1,3 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+- [Lecture 1 - Intruduction](./lecture_1.md)

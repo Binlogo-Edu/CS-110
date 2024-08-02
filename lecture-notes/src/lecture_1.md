@@ -35,3 +35,26 @@ Things an operating system designer has to think about to design a file system
 - Are small files stored diffirently than large files? <- **Performance**
 - How are files deleted? Make sure no space going to waste.
 - Can two filenames point to the same file? To avoid space waste.
+- Does file data share the same space as file metadata? <- (think: Heap Allocator...)
+
+**No matter how those questions are answered, the user should not be able to tell the difference.**
+
+### Modularity and Layering
+
+Add the `-i` flag to the `ls` command to see the inode number of the file.
+
+### Naming and Name Resolution
+
+what the inode is that is associated with that particular path.
+
+## Syllabus
+
+### Overview of Linux Filesystems
+
+- Linux and C libraries for file manipulation: `stat`, `struct stat`, `open`, `close`,`read`, `write`, `readdir`, `struct dirent`, file descriptors, regular files, directories, soft and hard links, programmatic manipulation of them, implementation of `ls`, `cp`, `find`, and other core Unix utilities you probably never realized were plain old C
+programs
+- Naming, abstraction and layering concepts in systems as a means for managing complexity, blocks, inodes, inode pointer structure, inode as abstraction over blocks, direct blocks, indirect blocks, doubly indirect blocks, design and implementation of a file system
+- Multiprocessing and Exceptional Control Flow
+  - Introduction to multiprocessing, fork, waitpid, execvp, process ids, interprocess communication, context switches, user versus kernel mode, system calls and how their calling convention differs from those of normal functions
+  - Protected address spaces, virtual memory, virtual to physical address mapping, scheduling
+Concurrency versus parallelism, multiple cores versus multiple processors, concurrency issues with multiprocessing, signal masks

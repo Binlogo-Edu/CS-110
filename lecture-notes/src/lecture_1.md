@@ -58,3 +58,12 @@ programs
   - Introduction to multiprocessing, fork, waitpid, execvp, process ids, interprocess communication, context switches, user versus kernel mode, system calls and how their calling convention differs from those of normal functions
   - Protected address spaces, virtual memory, virtual to physical address mapping, scheduling
 Concurrency versus parallelism, multiple cores versus multiple processors, concurrency issues with multiprocessing, signal masks
+
+### Pros and cons of file descriptors over FILE pointers and C++ iostreams
+
+- The fd abstraction provides direct, low lovel access to stream of data without the fuss of data structures or objects. It certainly can't be slower.
+- FILE pointers and C++ iostreams work well when you know you're interacting with standard output, standard input, and local files.
+  - They are less useful when the stream of bytes is associated with a network connection.
+  - FILE pointers and C++ iostreams assume they can rewind and move the file pointer back and forth freely, but that's not the case with file descriptors associated with network connections.
+- File descriptors, however, work with read and write and little else used in this course.
+- C FILE pointers and C++ streams, on the other hand, provide automatic buffering and more elaborate formatting options.

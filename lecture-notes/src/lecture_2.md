@@ -54,3 +54,5 @@ ls -l newfile
 In summary, `umask` is an essential command for controlling default file permissions in a Unix system, ensuring that new files and directories are created with permissions that do not allow more access than desired.
 
 ## Groups
+
+## Assignment 1: Six Degrees of Kevin Bacon

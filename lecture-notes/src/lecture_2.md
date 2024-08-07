@@ -56,3 +56,21 @@ In summary, `umask` is an essential command for controlling default file permiss
 ## Groups
 
 ## Assignment 1: Six Degrees of Kevin Bacon
+
+## Assignment 1: Lambda Functions
+
+- capture all class variables, can use `[this]`
+  - e.g: `[this, val, &myVec]`
+- any in-scope variables you want to use in the lambda function must be captured in the capture clause `[]`.
+- we will use lambda function a great deal when we get to threading.
+
+## Implementing `copy` to emulate `cp`
+
+- should close file when done using it.
+  - we will use [`valgrind`](https://valgrind.org/) to check if the file are being closed.
+
+## Pros and Cons of File Descriptors Over FILE Pointers and C++ iostreams
+
+## Implementing `t` to emulate `tee`
+
+- `tee` reads from standard input and writes to standard output and files.

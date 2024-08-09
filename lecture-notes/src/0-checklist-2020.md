@@ -3,7 +3,7 @@
 ## Week 1
 
 - [x] Lecture 1 - Introduction
-- [ ] Lecture 2 - File Systems
+- [x] Lecture 2 - File Systems
 - [ ] Lecture 3 - Layering, Naming, and Filesystem Design
 
 ## Week 2

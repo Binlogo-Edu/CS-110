@@ -1,5 +1,3 @@
-# Lecture 3 - Layering, Naming, and Filesystem Design
-
 ## Memory
 
 - just like RAM, hard drives provide us with **a contiguous stretch of memory** where we can store data.
@@ -42,6 +40,7 @@ file contents
 - In Unix, the inode is a data structure that stores information about a file to track which blocks are associated with that file.
 - *inodes* are 32-byte data structures that contain metadata about files.
   - stored within an inode: file size, permissions, timestamps, and pointers to the blocks that store the file's data.
+- a file's inodes tell us where the file's data blocks are stored on the disk, but the inode also has to be stored somewhere.
 
 ```c
 struct inode {
@@ -56,3 +55,8 @@ struct inode {
   uint16_t i_mtime[2]; // last modification time
 };
 ```
+
+- we rely on file names to access files, but the computer uses **inode numbers** to access files.
+
+## Addressing file
+
